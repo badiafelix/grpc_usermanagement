@@ -1,0 +1,8 @@
+generate protoc :
+protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative usermgmt/usermgmt.proto
+
+run server :
+go run usermgmt_server/usermgmt_server.go
+
+run client :
+go run usermgmt_client/usermgmt_client.go
